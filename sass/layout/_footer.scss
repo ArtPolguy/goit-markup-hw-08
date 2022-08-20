@@ -1,0 +1,105 @@
+.footer-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.footer-container-adress {
+  flex-grow: 1;
+  margin-right: 70px;
+}
+.page-footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.logo-footer {
+  font-family: var(--secondary-font);
+  @include font(700, 26px, 1.2);
+  color: var(--main-text-color-dark-theme);
+}
+.contacts {
+  font-style: normal;
+  margin-top: 20px;
+}
+.contact-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.contact-footer {
+  @include font($fs: 14px, $lh: 1.7);
+  color: var(--main-text-color-dark-theme);
+}
+.contact-address {
+  color: inherit;
+}
+.contact-link {
+  color: inherit;
+  opacity: 60%;
+}
+.social-list-link-footer {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.social-list-icon-footer {
+  fill: #fff;
+}
+.title-social-list {
+  margin-bottom: 20px;
+  @include font(700, 14px, 1.14);
+  text-transform: uppercase;
+  color: var(--main-text-color-dark-theme);
+}
+.footer-social-list {
+  display: block;
+}
+.footer-container-social-links {
+  margin-right: 93px;
+}
+.footer-subscr-input {
+  width: 360px;
+  height: 50px;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  @include font($fs: 16px, $lh: 1.25);
+  color: rgba(255, 255, 255, 0.6);
+  margin-right: 12px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.footer-subscr-button {
+  width: 200px;
+  height: 50px;
+}
+.footer-form {
+  display: flex;
+  align-items: center;
+}
+
+.footer-subscr-button {
+  padding-top: 10px;
+  padding-right: 28px;
+  padding-bottom: 10px;
+  padding-left: 28px;
+  min-width: 200px;
+  border-radius: 4px;
+  border: none;
+  display: block;
+  @include font(700, 16px, 1.88, 0.06em);
+  color: var(--main-text-color-dark-theme);
+  background-color: var(--accent-color);
+  transition: box-shadow var(--transition-duration-and-func);
+}
+.footer-button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-subscr-name,
+.footer-subscr-icon {
+  display: block;
+}

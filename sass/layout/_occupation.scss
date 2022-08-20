@@ -1,0 +1,31 @@
+.occupation-section {
+  padding-bottom: 94px;
+}
+.occupation-img {
+  max-width: 100%;
+  height: auto;
+}
+.occupation-item {
+  position: relative;
+  display: block;
+}
+
+.occupation-list {
+  display: flex;
+  justify-content: space-between;
+}
+.occupation-name-container {
+  position: absolute;
+}
+.occupation-name {
+  position: absolute;
+  @extend %align;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  @include font(700, 14px, 1.14);
+  text-transform: uppercase;
+  color: var(--main-text-color-dark-theme);
+  background-color: rgba(47, 48, 58, 0.8);
+}
