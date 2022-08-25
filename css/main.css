@@ -65,10 +65,16 @@ button {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -515,6 +521,8 @@ button {
     margin-right: 10px;
     fill: var(--secondary-text-color-white-theme);
   }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .contact-header__list:not(:last-child) {
     margin-bottom: 10px;
   }
@@ -543,21 +551,98 @@ button {
     margin-left: 30px;
   }
 }
-@media screen and (max-width: 767px) {
+.hero-section {
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/mobile/hero-mobile/hero-mobile.jpg");
+  background-color: #c4c4c4;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-title {
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.7;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--main-text-color-dark-theme);
+}
+
+.hero-button {
+  padding-top: 10px;
+  padding-right: 22px;
+  padding-bottom: 10px;
+  padding-left: 22px;
+  min-width: 200px;
+  border-radius: 4px;
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--main-text-color-dark-theme);
+  background-color: var(--accent-color);
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .hero-section {
-    padding-top: 118px;
-    padding-bottom: 118px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg.jpg");
-    background-color: #c4c4c4;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/mobile/hero-mobile/hero-mobile@2x.jpg");
   }
 }
-.advantages-list {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+@media screen and (min-width: 768px) {
+  .hero-section {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/tablet/hero-tablet/hero-tablet.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero-section {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/tablet/hero-tablet/hero-tablet@2x.jpg");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-section {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/desktop/hero-desktop/hero-desktop.jpg");
+  }
+  .page-title {
+    max-width: 700px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero-section {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/desktop/hero-desktop/hero-desktop@2x.jpg");
+  }
+}
+@media screen and (max-width: 767px) {
+  .advantages-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .advantages-name {
+    text-align: center;
+  }
+}
+.advantages-item-icon {
+  width: 70px;
+  height: 70px;
 }
 
 .advantages-item-container {
@@ -566,15 +651,6 @@ button {
   border-radius: 4px;
   border: none;
   margin-bottom: 30px;
-}
-
-.advantages-item-icon {
-  width: 70px;
-  height: 70px;
-}
-
-.advantages-item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .advantages-name {
@@ -596,6 +672,21 @@ button {
   color: var(--secondary-text-color-white-theme);
 }
 
+@media screen and (min-width: 767px) {
+  .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .advantages-item {
+    max-width: 354px;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .advantages-item {
+    max-width: 270px;
+  }
+}
 .occupation-section {
   padding-bottom: 94px;
 }
@@ -634,18 +725,39 @@ button {
   background-color: rgba(47, 48, 58, 0.8);
 }
 
+@media screen and (max-width: 768px) {
+  .team-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
 .team-section {
   background-color: #f5f4fa;
-}
-
-.team-list {
-  display: flex;
-  justify-content: space-between;
 }
 
 .subtitle-container {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.social-list-icon {
+  fill: #afb1b8;
+  width: 20px;
+  height: 20px;
+  transition: fill var(--transition-duration-and-func);
+}
+.social-list-link:hover .social-list-icon, .social-list-link:focus .social-list-icon {
+  fill: #fff;
+}
+
+.social-list-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: background-color var(--transition-duration-and-func);
+}
+.social-list-link:hover, .social-list-link:focus {
+  background-color: var(--accent-color);
 }
 
 .colleagues-name {
@@ -681,23 +793,22 @@ button {
   background-color: var(--accent-color);
 }
 
-.social-list-icon {
-  fill: #afb1b8;
-  width: 20px;
-  height: 20px;
-  transition: fill var(--transition-duration-and-func);
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
-.social-list-link:hover .social-list-icon, .social-list-link:focus .social-list-icon {
-  fill: #fff;
-}
-
 .clients-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .clients-list-link {
-  width: 170px;
+  width: 210px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -717,6 +828,16 @@ button {
   fill: var(--accent-color);
 }
 
+@media screen and (min-width: 768px) {
+  .clients-list-link {
+    width: 210px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients-list-link {
+    width: 170px;
+  }
+}
 .footer-container {
   display: flex;
   align-items: baseline;

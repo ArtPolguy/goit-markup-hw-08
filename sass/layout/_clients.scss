@@ -1,11 +1,13 @@
 .clients-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .clients-list-link {
   @extend %align;
-  width: 170px;
+  width: 210px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -25,5 +27,15 @@
   .clients-list-link:hover &,
   .clients-list-link:focus & {
     fill: var(--accent-color);
+  }
+}
+@media screen and(min-width:768px) {
+  .clients-list-link {
+    width: 210px;
+  }
+}
+@media screen and(min-width:1200px) {
+  .clients-list-link {
+    width: 170px;
   }
 }
