@@ -734,6 +734,10 @@ button {
   background-color: #f5f4fa;
 }
 
+.team-image {
+  width: 100%;
+}
+
 .subtitle-container {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -838,17 +842,35 @@ button {
     width: 170px;
   }
 }
-.footer-container {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+@media screen and (max-width: 1199px) {
+  .title-social-list {
+    text-align: center;
+  }
+  .footer-form {
+    flex-direction: column;
+  }
+  .footer-container-adress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  .contact-item {
+    display: flex;
+    justify-content: center;
+  }
+  .footer-container-social-links {
+    margin-bottom: 60px;
+  }
+  .footer-subscr-input {
+    margin-bottom: 20px;
+  }
+  .footer-container-subscr {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 }
-
-.footer-container-adress {
-  flex-grow: 1;
-  margin-right: 70px;
-}
-
 .page-footer {
   background-color: #2f303a;
   padding-top: 60px;
@@ -869,10 +891,6 @@ button {
   margin-top: 20px;
 }
 
-.contact-item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
 .contact-footer {
   font-weight: 400;
   font-size: 14px;
@@ -890,14 +908,6 @@ button {
   opacity: 60%;
 }
 
-.social-list-link-footer {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.social-list-icon-footer {
-  fill: #fff;
-}
-
 .title-social-list {
   margin-bottom: 20px;
   font-weight: 700;
@@ -908,15 +918,21 @@ button {
   color: var(--main-text-color-dark-theme);
 }
 
-.footer-social-list {
-  display: block;
+.social-list-link-footer {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer-container-social-links {
-  margin-right: 93px;
+.social-list-icon-footer {
+  fill: #fff;
+}
+
+.footer-form {
+  display: flex;
+  align-items: center;
 }
 
 .footer-subscr-input {
+  display: block;
   width: 360px;
   height: 50px;
   padding: 15px;
@@ -929,7 +945,6 @@ button {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-  margin-right: 12px;
 }
 .footer-subscr-input:focus {
   outline: none;
@@ -938,11 +953,6 @@ button {
 .footer-subscr-button {
   width: 200px;
   height: 50px;
-}
-
-.footer-form {
-  display: flex;
-  align-items: center;
 }
 
 .footer-subscr-button {
@@ -974,11 +984,51 @@ button {
   display: block;
 }
 
+.footer-social-list {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container_wrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .footer-container-adress {
+    flex-grow: 1;
+    margin-right: 70px;
+  }
+  .contact-item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  .footer-container-social-links {
+    margin-right: 93px;
+  }
+  .footer-subscr-input {
+    margin-right: 12px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .footer-subscr-input {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .filter {
+    flex-wrap: wrap;
+  }
+}
 .filter {
   display: flex;
-  justify-content: center;
   gap: 8px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .filter__button {
@@ -1002,6 +1052,23 @@ button {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+@media screen and (min-width: 768px) {
+  .filter {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .portfolio-list__image {
+    width: 100%;
+  }
+}
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
@@ -1033,7 +1100,6 @@ button {
 
 .portfolio-list__link {
   display: block;
-  max-width: 370px;
   background-color: #ffffff;
   transition: box-shadow var(--transition-duration-and-func);
 }
@@ -1078,4 +1144,16 @@ button {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--main-text-color-white-theme);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-list__wrapper {
+    padding-bottom: 56px;
+  }
+  .portfolio-list__link {
+    max-width: 354px;
+  }
+  .portfolio-list__wrapper_title {
+    padding-bottom: 20px;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -24,10 +24,10 @@
           <a class="link logo" href="" lang="en"> <span class="logo__part">Web</span>Studio</a>
           <ul class="list menu">
             <li class="menu__item">
-              <a class="link menu__link" href="./index.html">Студия</a>
+              <a class="link menu__link menu__link_current" href="./index.html">Студия</a>
             </li>
             <li class="menu__item">
-              <a class="link menu__link menu__link_current" href="./portfolio.html">Портфолио</a>
+              <a class="link menu__link" href="./portfolio.html">Портфолио</a>
             </li>
             <li class="menu__item">
               <a class="link menu__link" href="#contacts">Контакты</a>
@@ -52,6 +52,63 @@
             </a>
           </li>
         </ul>
+        <button type="button" class="menu-button-open" data-menu-open>
+          <svg class="menu-button-open__icon" width="40" height="40">
+            <use href="./images/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu__container">
+          <button class="mobile-menu__close-button" data-menu-close>
+            <svg class="mobile-menu__close-icon" width="40" height="40">
+              <use href="./images/sprite.svg#icon-close-40px"></use>
+            </svg>
+          </button>
+          <ul class="list mobile-menu-list">
+            <li class="mobile-menu-list__item">
+              <a
+                class="link mobile-menu-list__link mobile-menu-list__item_current"
+                href="./index.html"
+                >Студия</a
+              >
+            </li>
+            <li class="mobile-menu-list__item">
+              <a class="link mobile-menu-list__link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="mobile-menu-list__item">
+              <a class="link mobile-menu-list__link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+          <ul class="list mobile-menu-contacts">
+            <li class="mobile-menu-contacts__item">
+              <a class="link mobile-menu-contacts__link" href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="list mobile-menu-contacts__item">
+              <a
+                class="link mobile-menu-contacts__link mobile-menu-contacts_phone"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="list mobile-menu-social">
+            <li class="mobile-menu-social__item">
+              <a class="link mobile-menu-social__link" href="">Instagram</a>
+            </li>
+            <li class="mobile-menu-social__item">
+              <a class="link mobile-menu-social__link" href="">Twitter</a>
+            </li>
+            <li class="mobile-menu-social__item">
+              <a class="link mobile-menu-social__link" href="">Facebook</a>
+            </li>
+            <li class="mobile-menu-social__item">
+              <a class="link mobile-menu-social__link" href="">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <!-- =========================section Portfolio========================= -->
@@ -80,12 +137,34 @@
             <li class="portfolio-list__item">
               <a class="portfolio-list__link link" href="">
                 <div class="portfolio-list__container">
-                  <img
-                    src="./images/portfolio/technocrack.jpg"
-                    alt="ноутбук"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/pr1-desktop/pr1-desktop.jpg    1x,
+                        ./images/desktop/pr1-desktop/pr1-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/pr1-tablet/pr1-tablet.jpg    1x,
+                        ./images/tablet/pr1-tablet/pr1-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/pr1-mobile/pr1-mobile.jpg    1x,
+                        ./images/mobile/pr1-mobile/pr1-mobile@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      class="portfolio-list__image"
+                      src="./images/mobile/pr1-mobile/pr1-mobile.jpg"
+                      alt="ноутбук"
+                    />
+                  </picture>
                   <p class="portfolio-list__overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -101,19 +180,41 @@
             <li class="portfolio-list__item">
               <a class="portfolio-list__link link" href="">
                 <div class="portfolio-list__container">
-                  <img
-                    src="./images/portfolio/poster-neworlean-vs-goldenstar.jpg"
-                    alt="два баскетболиста в борьбе за мяч"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/pr2-desktop/pr2-desktop.jpg    1x,
+                        ./images/desktop/pr2-desktop/pr2-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/pr2-tablet/pr2-tablet.jpg    1x,
+                        ./images/tablet/pr2-tablet/pr2-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/pr2-mobile/pr2-mobile.jpg    1x,
+                        ./images/mobile/pr2-mobile/pr2-mobile@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      class="portfolio-list__image"
+                      src="./images/mobile/pr2-mobile/pr2-mobile.jpg"
+                      alt="два баскетболиста в борьбе за мяч"
+                    />
+                  </picture>
                   <p class="portfolio-list__overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
                     или частном лице.
                   </p>
                 </div>
-                <div class="portfolio-list__wrapper">
+                <div class="portfolio-list__wrapper portfolio-list__wrapper_title">
                   <h2 class="portfolio-list__title">Постер New Orlean vs Golden Star</h2>
                   <p class="portfolio-list__occupation-title">Дизайн</p>
                 </div>
@@ -122,12 +223,34 @@
             <li class="portfolio-list__item">
               <a class="portfolio-list__link link" href="">
                 <div class="portfolio-list__container">
-                  <img
-                    src="./images/portfolio/restaraunt-seafood.jpg"
-                    alt="эмблема ресторона сифуд"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/pr3-desktop/pr3-desktop.jpg    1x,
+                        ./images/desktop/pr3-desktop/pr3-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/pr3-tablet/pr3-tablet.jpg    1x,
+                        ./images/tablet/pr3-tablet/pr3-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/pr3-mobile/pr3-mobile.jpg    1x,
+                        ./images/mobile/pr3-mobile/pr3-mobile@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      class="portfolio-list__image"
+                      src="./images/mobile/pr3-mobile/pr3-mobile.jpg"
+                      alt="эмблема ресторона сифуд"
+                    />
+                  </picture>
                   <p class="portfolio-list__overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -143,12 +266,34 @@
             <li class="portfolio-list__item">
               <a class="portfolio-list__link link" href="">
                 <div class="portfolio-list__container">
-                  <img
-                    src="./images/portfolio/project-prime.jpg"
-                    alt="наушники"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/pr4-desktop/pr4-desktop.jpg    1x,
+                        ./images/desktop/pr4-desktop/pr4-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/pr4-tablet/pr4-tablet.jpg    1x,
+                        ./images/tablet/pr4-tablet/pr4-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/pr4-mobile/pr4-mobile.jpg    1x,
+                        ./images/mobile/pr4-mobile/pr4-mobile@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      class="portfolio-list__image"
+                      src="./images/mobile/pr4-mobile/pr4-mobile.jpg"
+                      alt="наушники"
+                    />
+                  </picture>
                   <p class="portfolio-list__overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -164,12 +309,34 @@
             <li class="portfolio-list__item">
               <a class="portfolio-list__link link" href="">
                 <div class="portfolio-list__container">
-                  <img
-                    src="./images/portfolio/project-boxes.jpg"
-                    alt="две коробки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/pr5-desktop/pr5-desktop.jpg    1x,
+                        ./images/desktop/pr5-desktop/pr5-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/pr5-tablet/pr5-tablet.jpg    1x,
+                        ./images/tablet/pr5-tablet/pr5-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/pr5-mobile/pr5-mobile.jpg    1x,
+                        ./images/mobile/pr5-mobile/pr5-mobile@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      class="portfolio-list__image"
+                      src="./images/mobile/pr5-mobile/pr5-mobile.jpg"
+                      alt="две коробки"
+                    />
+                  </picture>
                   <p class="portfolio-list__overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -185,12 +352,34 @@
             <li class="portfolio-list__item">
               <a class="portfolio-list__link link" href="">
                 <div class="portfolio-list__container">
-                  <img
-                    src="./images/portfolio/inspiration-has-no-borders.jpg"
-                    alt="монитор"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/pr6-desktop/pr6-desktop.jpg    1x,
+                        ./images/desktop/pr6-desktop/pr6-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/pr6-tablet/pr6-tablet.jpg    1x,
+                        ./images/tablet/pr6-tablet/pr6-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/pr6-mobile/pr6-mobile.jpg    1x,
+                        ./images/mobile/pr6-mobile/pr6-mobile@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      class="portfolio-list__image"
+                      src="./images/mobile/pr6-mobile/pr6-mobile.jpg"
+                      alt="монитор"
+                    />
+                  </picture>
                   <p class="portfolio-list__overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -206,12 +395,34 @@
             <li class="portfolio-list__item">
               <a class="portfolio-list__link link" href="">
                 <div class="portfolio-list__container">
-                  <img
-                    src="./images/portfolio/limited-edition.jpg"
-                    alt="журнал"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/pr7-desktop/pr7-desktop.jpg    1x,
+                        ./images/desktop/pr7-desktop/pr7-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/pr7-tablet/pr7-tablet.jpg    1x,
+                        ./images/tablet/pr7-tablet/pr7-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/pr7-mobile/pr7-mobile.jpg    1x,
+                        ./images/mobile/pr7-mobile/pr7-mobile@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      class="portfolio-list__image"
+                      src="./images/mobile/pr7-mobile/pr7-mobile.jpg"
+                      alt="журнал"
+                    />
+                  </picture>
                   <p class="portfolio-list__overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -227,12 +438,34 @@
             <li class="portfolio-list__item">
               <a class="portfolio-list__link link" href="">
                 <div class="portfolio-list__container">
-                  <img
-                    src="./images/portfolio/project-lab.jpg"
-                    alt="бирка"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/pr8-desktop/pr8-desktop.jpg    1x,
+                        ./images/desktop/pr8-desktop/pr8-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/pr8-tablet/pr8-tablet.jpg    1x,
+                        ./images/tablet/pr8-tablet/pr8-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/pr8-mobile/pr8-mobile.jpg    1x,
+                        ./images/mobile/pr8-mobile/pr8-mobile@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      class="portfolio-list__image"
+                      src="./images/mobile/pr8-mobile/pr8-mobile.jpg"
+                      alt="бирка"
+                    />
+                  </picture>
                   <p class="portfolio-list__overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -248,12 +481,34 @@
             <li class="portfolio-list__item">
               <a class="portfolio-list__link link" href="">
                 <div class="portfolio-list__container">
-                  <img
-                    src="./images/portfolio/growing-business.jpg"
-                    alt="руки человека печатают на клавиатуре ноутбука"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/pr9-desktop/pr9-desktop.jpg    1x,
+                        ./images/desktop/pr9-desktop/pr9-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/pr9-tablet/pr9-tablet.jpg    1x,
+                        ./images/tablet/pr9-tablet/pr9-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/pr9-mobile/pr9-mobile.jpg    1x,
+                        ./images/mobile/pr9-mobile/pr9-mobile@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      class="portfolio-list__image"
+                      src="./images/mobile/pr9-mobile/pr9-mobile.jpg"
+                      alt="руки человека печатают на клавиатуре ноутбука"
+                    />
+                  </picture>
                   <p class="portfolio-list__overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -272,65 +527,69 @@
     </main>
     <footer class="page-footer">
       <div class="container footer-container">
-        <div class="footer-container-adress">
-          <a class="link logo-footer" href="" lang="en">
-            <span class="logo-part">Web</span>Studio</a
-          >
-          <address class="contacts" id="contacts">
-            <ul class="contact-footer list">
-              <li class="contact-item">
-                <a
-                  class="contact-address link"
-                  href="https://goo.gl/maps/2nvCJboYjxiyjbgM6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >г. Киев, пр-т Леси Украинки, 26</a
-                >
+        <div class="footer-container_wrapper">
+          <div class="footer-container-adress">
+            <a class="link logo-footer" href="" lang="en">
+              <span class="logo__part">Web</span>Studio</a
+            >
+            <address class="contacts" id="contacts">
+              <ul class="contact-footer list">
+                <li class="contact-item">
+                  <a
+                    class="contact-address link"
+                    href="https://goo.gl/maps/2nvCJboYjxiyjbgM6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >г. Киев, пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="contact-item">
+                  <a class="contact-link link" href="mailto:info@example.com">info@example.com</a>
+                </li>
+                <li class="contact-item">
+                  <a class="contact-link link" href="tel:+380991111111">+38 099 111 11 11</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-container-social-links">
+            <h3 class="title-social-list">Присоединяйтесь</h3>
+            <ul class="social-list list">
+              <li class="social-list-item">
+                <a href="" class="social-list-link social-list-link-footer">
+                  <svg class="social-list-icon social-list-icon-footer">
+                    <use href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="contact-item">
-                <a class="contact-link link" href="mailto:info@example.com">info@example.com</a>
+              <li class="social-list-item">
+                <a href="" class="social-list-link social-list-link-footer">
+                  <svg class="social-list-icon social-list-icon-footer">
+                    <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="contact-item">
-                <a class="contact-link link" href="tel:+380991111111">+38 099 111 11 11</a>
+              <li class="social-list-item">
+                <a href="" class="social-list-link social-list-link-footer">
+                  <svg class="social-list-icon social-list-icon-footer">
+                    <use href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list-item">
+                <a href="" class="social-list-link social-list-link-footer">
+                  <svg class="social-list-icon social-list-icon-footer">
+                    <use href="./images/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="footer-container-social-links">
-          <h3 class="title-social-list">Присоединяйтесь</h3>
-          <ul class="social-list list">
-            <li class="social-list-item">
-              <a href="" class="social-list-link social-list-link-footer">
-                <svg class="social-list-icon social-list-icon-footer">
-                  <use href="./images/sprite.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list-item">
-              <a href="" class="social-list-link social-list-link-footer">
-                <svg class="social-list-icon social-list-icon-footer">
-                  <use href="./images/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list-item">
-              <a href="" class="social-list-link social-list-link-footer">
-                <svg class="social-list-icon social-list-icon-footer">
-                  <use href="./images/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list-item">
-              <a href="" class="social-list-link social-list-link-footer">
-                <svg class="social-list-icon social-list-icon-footer">
-                  <use href="./images/sprite.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="footer-container-subscr" role="group" aria-labelledby="email-subscription">
-          <p class="footer-subscr-title title-social-list">Подпишитесь на рассылку</p>
+          <p id="email-subscription" class="footer-subscr-title title-social-list">
+            Подпишитесь на рассылку
+          </p>
           <form class="footer-form">
             <input
               class="footer-subscr-input"
@@ -340,12 +599,12 @@
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
             />
             <button type="submit" class="footer-subscr-button">
-              <div class="footer-button-wrapper">
+              <span class="footer-button-wrapper">
                 <span class="footer-subscr-name">Подписаться</span>
                 <svg class="footer-subscr-icon" width="24px" height="24px">
                   <use href="./images/sprite.svg#icon-send"></use>
                 </svg>
-              </div>
+              </span>
             </button>
           </form>
         </div>
