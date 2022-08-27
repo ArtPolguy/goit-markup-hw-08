@@ -1041,7 +1041,7 @@ button {
     width: 360px;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 479px) {
   .footer-subscr-input {
     width: 100%;
   }
