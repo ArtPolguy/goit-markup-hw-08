@@ -32,12 +32,12 @@
 .page-header {
   padding-top: 10px;
   padding-bottom: 10px;
+  border-bottom: 1px solid #ececec83;
 }
 @media screen and(min-width:768px) {
   .page-header {
     padding-top: 24px;
     padding-bottom: 24px;
-    border-bottom: 1px solid #ececec83;
   }
   .menu-button-open {
     display: none;

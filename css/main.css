@@ -239,8 +239,8 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   background-color: #ffffff;
 }
 
@@ -265,6 +265,12 @@ button {
   fill: var(--accent-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+}
 .modal-form {
   display: flex;
   flex-direction: column;
@@ -352,8 +358,8 @@ button {
   margin-top: 20px;
   margin-bottom: 30px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
 }
@@ -405,12 +411,26 @@ button {
 
 .modal-form-contract-descr {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--accent-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .modal-form-descr {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+  .modal-form-contract-descr {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+}
 @media screen and (max-width: 767px) {
   .menu {
     display: none;
@@ -452,13 +472,13 @@ button {
 .page-header {
   padding-top: 10px;
   padding-bottom: 10px;
+  border-bottom: 1px solid rgba(236, 236, 236, 0.5137254902);
 }
 
 @media screen and (min-width: 768px) {
   .page-header {
     padding-top: 24px;
     padding-bottom: 24px;
-    border-bottom: 1px solid rgba(236, 236, 236, 0.5137254902);
   }
   .menu-button-open {
     display: none;
@@ -687,6 +707,11 @@ button {
     max-width: 270px;
   }
 }
+@media screen and (max-width: 1199px) {
+  .occupation-section {
+    display: none;
+  }
+}
 .occupation-section {
   padding-bottom: 94px;
 }
@@ -864,6 +889,7 @@ button {
   }
   .footer-subscr-input {
     margin-bottom: 20px;
+    width: 450px;
   }
   .footer-container-subscr {
     display: flex;
@@ -933,7 +959,6 @@ button {
 
 .footer-subscr-input {
   display: block;
-  width: 360px;
   height: 50px;
   padding: 15px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1013,9 +1038,10 @@ button {
   }
   .footer-subscr-input {
     margin-right: 12px;
+    width: 360px;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 480px) {
   .footer-subscr-input {
     width: 100%;
   }

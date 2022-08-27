@@ -73,7 +73,7 @@
   align-items: center;
   margin-top: 20px;
   margin-bottom: 30px;
-  @include font(400, 14px, 1.71);
+  @include font(400, 12px, 1.17);
   color: #757575;
 
   &::before {
@@ -121,6 +121,27 @@
 }
 
 .modal-form-contract-descr {
-  @include font(400, 14px, 1.71);
+  @include font(400, 12px, 1.17);
   color: var(--accent-color);
 }
+@media screen and(min-width:1200px) {
+  .modal-form-descr {
+    @include font(400, 14px, 1.71);
+  }
+  .modal-form-contract-descr {
+    @include font(400, 14px, 1.71);
+  }
+}
+// .modal-form-descr {
+//   display: flex;
+//   align-items: center;
+//   margin-top: 20px;
+//   margin-bottom: 30px;
+//   @include font(400, 14px, 1.71);
+//   color: #757575;
+// }
+
+// .modal-form-contract-descr {
+//   @include font(400, 14px, 1.71);
+//   color: var(--accent-color);
+// }
