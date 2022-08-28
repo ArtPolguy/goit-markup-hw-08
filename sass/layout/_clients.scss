@@ -4,10 +4,11 @@
   flex-wrap: wrap;
   gap: 30px;
 }
-
+.clients-list-item {
+  flex-basis: calc((100% - 30px) / 2);
+}
 .clients-list-link {
   @extend %align;
-  width: 210px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -30,12 +31,15 @@
   }
 }
 @media screen and(min-width:768px) {
-  .clients-list-link {
-    width: 210px;
+  .clients-list-item {
+    flex-basis: calc((100% - 60px) / 3);
   }
 }
 @media screen and(min-width:1200px) {
-  .clients-list-link {
-    width: 170px;
+  .clients-list {
+    flex-wrap: nowrap;
+  }
+  .clients-list-item {
+    flex-basis: calc((100% - 150px) / 6);
   }
 }

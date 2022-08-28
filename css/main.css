@@ -140,6 +140,9 @@ button {
     padding-top: 48px;
     padding-bottom: 48px;
     padding-left: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   .mobile-menu-list__link {
     display: block;
@@ -160,9 +163,6 @@ button {
   .mobile-menu-list__item_current {
     color: var(--accent-color);
   }
-  .mobile-menu-list {
-    margin-bottom: 302px;
-  }
   .mobile-menu-contacts__link {
     font-weight: 500;
     font-size: 34px;
@@ -171,6 +171,7 @@ button {
     color: var(--accent-color);
   }
   .mobile-menu-contacts {
+    margin-top: auto;
     margin-bottom: 64px;
   }
   .mobile-menu-contacts_phone {
@@ -206,14 +207,23 @@ button {
 }
 .subtitle {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--main-text-color-white-theme);
 }
 
+@media screen and (min-width: 1200px) {
+  .subtitle {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
+}
 .card-title {
   margin-bottom: 16px;
   font-size: 16px;
@@ -269,6 +279,11 @@ button {
   .modal {
     width: 528px;
     height: 581px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .modal {
+    width: 320px;
   }
 }
 .modal-form {
@@ -446,7 +461,6 @@ button {
   }
 }
 .logo {
-  margin-right: 88px;
   font-family: var(--secondary-font);
   font-weight: 700;
   font-size: 26px;
@@ -476,6 +490,9 @@ button {
 }
 
 @media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 88px;
+  }
   .page-header {
     padding-top: 24px;
     padding-bottom: 24px;
@@ -836,8 +853,11 @@ button {
   gap: 30px;
 }
 
+.clients-list-item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+
 .clients-list-link {
-  width: 210px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -858,13 +878,16 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  .clients-list-link {
-    width: 210px;
+  .clients-list-item {
+    flex-basis: calc((100% - 60px) / 3);
   }
 }
 @media screen and (min-width: 1200px) {
-  .clients-list-link {
-    width: 170px;
+  .clients-list {
+    flex-wrap: nowrap;
+  }
+  .clients-list-item {
+    flex-basis: calc((100% - 150px) / 6);
   }
 }
 @media screen and (max-width: 1199px) {
@@ -878,13 +901,12 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 60px;
   }
   .contact-item {
     display: flex;
     justify-content: center;
   }
-  .footer-container-social-links {
+  .footer-container_wrapper {
     margin-bottom: 60px;
   }
   .footer-subscr-input {
@@ -923,6 +945,10 @@ button {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--main-text-color-dark-theme);
+}
+
+.contact-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .contact-address {
@@ -1017,7 +1043,7 @@ button {
   .footer-container_wrapper {
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1029,9 +1055,6 @@ button {
   .footer-container-adress {
     flex-grow: 1;
     margin-right: 70px;
-  }
-  .contact-item:not(:last-child) {
-    margin-bottom: 9px;
   }
   .footer-container-social-links {
     margin-right: 93px;
@@ -1095,6 +1118,12 @@ button {
     width: 100%;
   }
 }
+.portfolio-list__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
@@ -1102,6 +1131,7 @@ button {
 }
 
 .portfolio-list__wrapper {
+  flex-grow: 1;
   padding-left: 24px;
   padding-right: 24px;
   padding-top: 20px;
@@ -1125,7 +1155,6 @@ button {
 }
 
 .portfolio-list__link {
-  display: block;
   background-color: #ffffff;
   transition: box-shadow var(--transition-duration-and-func);
 }
@@ -1173,9 +1202,6 @@ button {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .portfolio-list__wrapper {
-    padding-bottom: 56px;
-  }
   .portfolio-list__link {
     max-width: 354px;
   }

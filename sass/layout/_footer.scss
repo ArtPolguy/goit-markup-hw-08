@@ -9,13 +9,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 60px;
   }
   .contact-item {
     display: flex;
     justify-content: center;
   }
-  .footer-container-social-links {
+  .footer-container_wrapper {
     margin-bottom: 60px;
   }
   .footer-subscr-input {
@@ -47,7 +46,9 @@
   @include font($fs: 14px, $lh: 1.7);
   color: var(--main-text-color-dark-theme);
 }
-
+.contact-item:not(:last-child) {
+  margin-bottom: 9px;
+}
 .contact-address {
   color: inherit;
 }
@@ -123,7 +124,7 @@
   .footer-container_wrapper {
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 @media screen and(min-width:1200px) {
@@ -136,9 +137,7 @@
     flex-grow: 1;
     margin-right: 70px;
   }
-  .contact-item:not(:last-child) {
-    margin-bottom: 9px;
-  }
+
   .footer-container-social-links {
     margin-right: 93px;
   }

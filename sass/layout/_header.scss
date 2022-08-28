@@ -14,7 +14,6 @@
 }
 
 .logo {
-  margin-right: 88px;
   font-family: var(--secondary-font);
   @include font(700, 26px, 1.2);
   color: var(--main-text-color-white-theme);
@@ -35,6 +34,9 @@
   border-bottom: 1px solid #ececec83;
 }
 @media screen and(min-width:768px) {
+  .logo {
+    margin-right: 88px;
+  }
   .page-header {
     padding-top: 24px;
     padding-bottom: 24px;
